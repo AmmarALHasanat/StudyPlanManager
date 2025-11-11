@@ -19,7 +19,7 @@ with a simple and modern web interface.
 ---
 
 ###  Backend
-- **ASP.NET Core 8 (C#)** — RESTful API.
+- **ASP.NET Core 9 (C#)** — RESTful API.
 - **Entity Framework Core (SQLite)** — Lightweight and efficient database.
 - **JWT Authentication** — Secure user login and access control.
 
