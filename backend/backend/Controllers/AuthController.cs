@@ -3,6 +3,7 @@ using backend.Helpers;
 using backend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -22,12 +23,14 @@ namespace backend.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult Register([FromBody] UserDto request)
+        public IActionResult Register([FromBody] UserRegisterDto request)
         {
             if (_context.Users.Any(u => u.Username == request.Username))
                 return BadRequest("Username already exists");
 
-            CreatePasswordHash(request.Password, out byte[] hash, out byte[] salt);
+            using var hmac = new HMACSHA512();
+            byte[] salt = hmac.Key;
+            byte[] hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(request.Password));
 
             var user = new User
             {
@@ -43,36 +46,38 @@ namespace backend.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] UserDto request)
+        public IActionResult Login([FromBody] UserLoginDto request)
         {
             var user = _context.Users.FirstOrDefault(u => u.Username == request.Username);
             if (user == null) return Unauthorized("User not found");
-
-            if (!VerifyPassword(request.Password, user.PasswordHash, user.PasswordSalt))
+            using var hmac = new HMACSHA512(user.PasswordSalt);
+            var computed = hmac.ComputeHash(Encoding.UTF8.GetBytes(request.Password));
+            bool result = computed.SequenceEqual(user.PasswordHash);
+            if (!result)
                 return Unauthorized("Invalid password");
 
             var token = _jwtService.GenerateToken(user);
             return Ok(new { token });
         }
 
-        private void CreatePasswordHash(string password, out byte[] hash, out byte[] salt)
-        {
-            using var hmac = new HMACSHA512();
-            salt = hmac.Key;
-            hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-        }
-
-        private bool VerifyPassword(string password, byte[] hash, byte[] salt)
-        {
-            using var hmac = new HMACSHA512(salt);
-            var computed = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return computed.SequenceEqual(hash);
-        }
-
     }
-    public class UserDto
+    public class UserLoginDto
     {
         public string Username { get; set; } = "";
         public string Password { get; set; } = "";
+    }
+    public class UserRegisterDto
+    {
+        [EmailAddress]
+        public string Email { get; set; } = "";
+        [Required]
+        public string Name { get; set; } = "";
+        [Required]
+        public string Username { get; set; } = "";
+        [Required] 
+        public string Password { get; set; } = "";
+        [Required]
+        [Compare("Password", ErrorMessage = "Passwords do not match")]
+        public string PasswordConfirm { get; set; } = "";
     }
 }

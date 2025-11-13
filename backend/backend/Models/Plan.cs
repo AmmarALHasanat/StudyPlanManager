@@ -9,7 +9,7 @@
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int UserId { get; set; }
-        public User? User { get; set; }
-        public List<Week> Weeks { get; set; } = new();
+        public virtual User? User { get; set; }
+        public virtual List<Week>? Weeks { get; set; }
     }
 }

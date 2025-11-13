@@ -9,7 +9,7 @@
         public double Progress { get; set; }
         public string Rating { get; set; } = string.Empty;
 
-        public Plan? Plan { get; set; }
-        public List<TaskItem> Tasks { get; set; } = new();
+        public virtual Plan? Plan { get; set; }
+        public virtual List<TaskItem>? Tasks { get; set; }
     }
 }

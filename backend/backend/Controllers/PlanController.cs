@@ -28,28 +28,50 @@ namespace backend.Controllers
 
             var plans = _context.Plans
                 .Include(p => p.Weeks)
+                //.Include(p=>p.User)
+                //.AsNoTracking()
                 .Where(p => p.UserId == user.Id)
+                .Select(p => new Plan
+                {
+                    Id = p.Id, 
+                    Name = p.Name,
+                    DurationWeeks = p.DurationWeeks,
+                    Description = p.Description,
+                    StartDate = p.StartDate,
+                    EndDate = p.EndDate,
+                    Weeks = p.Weeks,
+                    UserId = p.UserId,
+                    //User = new User {Id=p.UserId, Username= p.User!.Username,Email=p.User!.Email} 
+                })
                 .ToList();
-
+            
             return Ok(plans);
         }
 
         [HttpPost]
-        public IActionResult AddPlan([FromBody] Plan plan)
+        public IActionResult AddPlan([FromBody] PlanDto plan)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
             if (user == null) return Unauthorized("User not found");
 
-            plan.UserId = user.Id;
-            _context.Plans.Add(plan);
+            Plan newPlan = new Plan
+            {
+                Name = plan.Name,
+                Description = plan.Description,
+                StartDate = plan.StartDate,
+                EndDate = plan.EndDate,
+                DurationWeeks = plan.DurationWeeks
+            };
+            newPlan.UserId = user.Id;
+            _context.Plans.Add(newPlan);
             _context.SaveChanges();
 
             return Ok(plan);
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdatePlan(int id, [FromBody] Plan updated)
+        public IActionResult UpdatePlan(int id, [FromBody] PlanDto updated)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
@@ -83,5 +105,14 @@ namespace backend.Controllers
 
             return Ok(new { message = "Plan deleted" });
         }
+    }
+    // or Use this Object to return only necessary fields 
+    public class PlanDto
+    {
+        public string Name { get; set; } = string.Empty;
+        public int DurationWeeks { get; set; }
+        public string Description { get; set; } = string.Empty;
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
     }
 }

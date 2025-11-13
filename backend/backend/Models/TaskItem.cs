@@ -12,6 +12,6 @@
         public string Notes { get; set; } = "";
         public string Status { get; set; } = "Pending"; // Done / InProgress / Pending
 
-        public Week? Week { get; set; }
+        public  Week? Week { get; set; }
     }
 }

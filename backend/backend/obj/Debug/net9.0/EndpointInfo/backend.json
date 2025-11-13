@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserRegisterDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserRegisterDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserRegisterDto"
               }
             }
           }
@@ -45,17 +45,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserDto"
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             }
           }
@@ -86,17 +86,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Plan"
+                "$ref": "#/components/schemas/PlanDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Plan"
+                "$ref": "#/components/schemas/PlanDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Plan"
+                "$ref": "#/components/schemas/PlanDto"
               }
             }
           }
@@ -128,17 +128,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Plan"
+                "$ref": "#/components/schemas/PlanDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Plan"
+                "$ref": "#/components/schemas/PlanDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Plan"
+                "$ref": "#/components/schemas/PlanDto"
               }
             }
           }
@@ -480,13 +480,9 @@
         },
         "additionalProperties": false
       },
-      "Plan": {
+      "PlanDto": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
             "type": "string",
             "nullable": true
@@ -506,65 +502,6 @@
           "endDate": {
             "type": "string",
             "format": "date-time"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "weeks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Week"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TaskItem": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "weekId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "day": {
-            "type": "string",
-            "nullable": true
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "activityType": {
-            "type": "string",
-            "nullable": true
-          },
-          "book": {
-            "type": "string",
-            "nullable": true
-          },
-          "pages": {
-            "type": "string",
-            "nullable": true
-          },
-          "notes": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          },
-          "week": {
-            "$ref": "#/components/schemas/Week"
           }
         },
         "additionalProperties": false
@@ -623,42 +560,7 @@
         },
         "additionalProperties": false
       },
-      "User": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "passwordHash": {
-            "type": "string",
-            "format": "byte",
-            "nullable": true
-          },
-          "passwordSalt": {
-            "type": "string",
-            "format": "byte",
-            "nullable": true
-          },
-          "role": {
-            "type": "string",
-            "nullable": true
-          },
-          "plans": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Plan"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserDto": {
+      "UserLoginDto": {
         "type": "object",
         "properties": {
           "username": {
@@ -672,42 +574,35 @@
         },
         "additionalProperties": false
       },
-      "Week": {
+      "UserRegisterDto": {
+        "required": [
+          "name",
+          "password",
+          "passwordConfirm",
+          "username"
+        ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "planId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "weekNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "summary": {
+          "email": {
             "type": "string",
+            "format": "email",
             "nullable": true
           },
-          "progress": {
-            "type": "number",
-            "format": "double"
+          "name": {
+            "minLength": 1,
+            "type": "string"
           },
-          "rating": {
-            "type": "string",
-            "nullable": true
+          "username": {
+            "minLength": 1,
+            "type": "string"
           },
-          "plan": {
-            "$ref": "#/components/schemas/Plan"
+          "password": {
+            "minLength": 1,
+            "type": "string"
           },
-          "tasks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TaskItem"
-            },
-            "nullable": true
+          "passwordConfirm": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

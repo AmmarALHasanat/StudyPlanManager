@@ -340,3 +340,4 @@ C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\refint\
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend.pdb
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend.sourcelink.json
