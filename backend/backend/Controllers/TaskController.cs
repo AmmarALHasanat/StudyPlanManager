@@ -36,7 +36,7 @@ namespace backend.Controllers
 
         // POST: api/task/{weekId}
         [HttpPost("{weekId:int}")]
-        public IActionResult AddTask(int weekId, [FromBody] CreateTaskDto dto)
+        public IActionResult AddTask(int weekId, [FromBody] TaskDto dto)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
@@ -49,10 +49,10 @@ namespace backend.Controllers
             {
                 WeekId = weekId,
                 Day = dto.Day ?? string.Empty,
-                Title = dto.Title ?? string.Empty,
+                Industry = dto.Industry ?? string.Empty,
                 ActivityType = dto.ActivityType ?? "Reading",
-                Book = dto.Book ?? string.Empty,
-                Pages = dto.Pages ?? string.Empty,
+                ActivityName = dto.ActivityName ?? string.Empty,
+                Target = dto.Target ?? string.Empty,
                 Notes = dto.Notes ?? string.Empty,
                 Status = dto.Status ?? "Pending"
             };
@@ -65,7 +65,7 @@ namespace backend.Controllers
 
         // PUT: api/task/{id}
         [HttpPut("{id:int}")]
-        public IActionResult UpdateTask(int id, [FromBody] UpdateTaskDto dto)
+        public IActionResult UpdateTask(int id, [FromBody] TaskDto dto)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
             var user = _context.Users.FirstOrDefault(u => u.Username == username);
@@ -79,10 +79,10 @@ namespace backend.Controllers
             if (task == null) return NotFound("Task not found or access denied");
 
             task.Day = dto.Day ?? task.Day;
-            task.Title = dto.Title ?? task.Title;
+            task.Industry = dto.Industry ?? task.Industry;
             task.ActivityType = dto.ActivityType ?? task.ActivityType;
-            task.Book = dto.Book ?? task.Book;
-            task.Pages = dto.Pages ?? task.Pages;
+            task.ActivityName = dto.ActivityName ?? task.ActivityName;
+            task.Target = dto.Target ?? task.Target;
             task.Notes = dto.Notes ?? task.Notes;
             if (!string.IsNullOrEmpty(dto.Status)) task.Status = dto.Status;
 
@@ -112,25 +112,14 @@ namespace backend.Controllers
     }
 
     // DTOs
-    public class CreateTaskDto
+    public class TaskDto
     {
         public string? Day { get; set; } // e.g., "Monday"
-        public string? Title { get; set; }
+        public string? Industry { get; set; }
         public string? ActivityType { get; set; } // Reading, Practice, Project...
-        public string? Book { get; set; }
-        public string? Pages { get; set; } // e.g., "pp.10-20" or "Chapter 3"
+        public string? ActivityName { get; set; }
+        public string? Target { get; set; }
         public string? Notes { get; set; }
         public string? Status { get; set; } = "Pending";
-    }
-
-    public class UpdateTaskDto
-    {
-        public string? Day { get; set; }
-        public string? Title { get; set; }
-        public string? ActivityType { get; set; }
-        public string? Book { get; set; }
-        public string? Pages { get; set; }
-        public string? Notes { get; set; }
-        public string? Status { get; set; } // Done / InProgress / Pending
     }
 }

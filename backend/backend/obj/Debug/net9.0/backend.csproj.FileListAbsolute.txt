@@ -332,7 +332,6 @@ C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\staticw
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\swae.build.ex.cache
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend.csproj.Up2Date
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend.dll

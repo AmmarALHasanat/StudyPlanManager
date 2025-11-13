@@ -8,7 +8,6 @@
         public string Summary { get; set; } = string.Empty;
         public double Progress { get; set; }
         public string Rating { get; set; } = string.Empty;
-
         public virtual Plan? Plan { get; set; }
         public virtual List<TaskItem>? Tasks { get; set; }
     }
