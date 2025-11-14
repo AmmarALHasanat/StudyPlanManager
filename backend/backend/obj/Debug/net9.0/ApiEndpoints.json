@@ -32,6 +32,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "backend.Controllers.AuthController",
+    "Method": "GetAllUser",
+    "RelativePath": "api/Auth/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backend.Controllers.PlanController",
     "Method": "GetMyPlans",
     "RelativePath": "api/Plan",
@@ -109,7 +119,7 @@
       },
       {
         "Name": "dto",
-        "Type": "backend.Controllers.UpdateTaskDto",
+        "Type": "backend.Controllers.TaskDto",
         "IsRequired": true
       }
     ],
@@ -146,7 +156,7 @@
       },
       {
         "Name": "dto",
-        "Type": "backend.Controllers.CreateTaskDto",
+        "Type": "backend.Controllers.TaskDto",
         "IsRequired": true
       }
     ],

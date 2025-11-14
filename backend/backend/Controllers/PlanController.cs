@@ -1,8 +1,7 @@
-﻿using backend.Data;
-using backend.Models;
+﻿using backend.DTO;
+using backend.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace backend.Controllers
@@ -12,39 +11,24 @@ namespace backend.Controllers
     [Authorize]
     public class PlanController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IPlanRepository _planRepository;
+        private readonly IUserRepository _userRepository;
 
-        public PlanController(ApplicationDbContext context)
+        public PlanController( IPlanRepository planRepository,IUserRepository userRepository)
         {
-            _context = context;
+            _planRepository = planRepository;
+            _userRepository = userRepository;
         }
 
         [HttpGet]
         public IActionResult GetMyPlans()
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _context.Users.FirstOrDefault(u => u.Username == username);
+            var user = _userRepository.GetByUsername(username??"");
             if (user == null) return Unauthorized("User not found");
 
-            var plans = _context.Plans
-                .Include(p => p.Weeks)
-                //.Include(p=>p.User)
-                //.AsNoTracking()
-                .Where(p => p.UserId == user.Id)
-                .Select(p => new Plan
-                {
-                    Id = p.Id, 
-                    Name = p.Name,
-                    DurationWeeks = p.DurationWeeks,
-                    Description = p.Description,
-                    StartDate = p.StartDate,
-                    EndDate = p.EndDate,
-                    Weeks = p.Weeks,
-                    UserId = p.UserId,
-                    //User = new User {Id=p.UserId, Username= p.User!.Username,Email=p.User!.Email} 
-                })
-                .ToList();
-            
+            var plans = _planRepository.GetPlansByUserId(user.Id);
+
             return Ok(plans);
         }
 
@@ -52,21 +36,11 @@ namespace backend.Controllers
         public IActionResult AddPlan([FromBody] PlanDto plan)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _context.Users.FirstOrDefault(u => u.Username == username);
+            var user = _userRepository.GetByUsername(username ?? "");
             if (user == null) return Unauthorized("User not found");
 
-            Plan newPlan = new Plan
-            {
-                Name = plan.Name,
-                Description = plan.Description,
-                StartDate = plan.StartDate,
-                EndDate = plan.EndDate,
-                DurationWeeks = plan.DurationWeeks
-            };
-            newPlan.UserId = user.Id;
-            _context.Plans.Add(newPlan);
-            _context.SaveChanges();
 
+           var newPlan = _planRepository.AddPlan(plan, user.Id);
             return Ok(plan);
         }
 
@@ -74,19 +48,13 @@ namespace backend.Controllers
         public IActionResult UpdatePlan(int id, [FromBody] PlanDto updated)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _context.Users.FirstOrDefault(u => u.Username == username);
+            var user = _userRepository.GetByUsername(username ?? "");
             if (user == null) return Unauthorized("User not found");
 
-            var plan = _context.Plans.FirstOrDefault(p => p.Id == id && p.UserId == user.Id);
+            var plan = _planRepository.GetPlanById(id, user.Id);
             if (plan == null) return NotFound("Plan not found");
+            _planRepository.UpdatePlan(plan, updated);
 
-            plan.Name = updated.Name;
-            plan.Description = updated.Description;
-            plan.StartDate = updated.StartDate;
-            plan.EndDate = updated.EndDate;
-            plan.DurationWeeks = updated.DurationWeeks;
-
-            _context.SaveChanges();
             return Ok(plan);
         }
 
@@ -94,25 +62,14 @@ namespace backend.Controllers
         public IActionResult DeletePlan(int id)
         {
             var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _context.Users.FirstOrDefault(u => u.Username == username);
+            var user = _userRepository.GetByUsername(username ?? "");
             if (user == null) return Unauthorized("User not found");
 
-            var plan = _context.Plans.FirstOrDefault(p => p.Id == id && p.UserId == user.Id);
+            var plan = _planRepository.GetPlanById(id, user.Id);
             if (plan == null) return NotFound("Plan not found");
-
-            _context.Plans.Remove(plan);
-            _context.SaveChanges();
+            _planRepository.RemovePlan(plan);
 
             return Ok(new { message = "Plan deleted" });
         }
-    }
-    // or Use this Object to return only necessary fields 
-    public class PlanDto
-    {
-        public string Name { get; set; } = string.Empty;
-        public int DurationWeeks { get; set; }
-        public string Description { get; set; } = string.Empty;
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using backend.Data;
 using backend.Helpers;
+using backend.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -32,6 +33,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
 // Add services to the container.
+builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IWeekRepository, WeekRepository>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+
+
 builder.Services.AddSingleton<JwtService>();
 
 builder.Services.AddControllers().AddJsonOptions(options =>{

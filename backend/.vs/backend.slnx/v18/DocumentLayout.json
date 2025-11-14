@@ -3,60 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\controllers\\plancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\controllers\\plancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\repositories\\iplanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\repositories\\iplanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\models\\week.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\models\\week.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\models\\plan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\models\\plan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\controllers\\plancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\controllers\\plancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\dto\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\dto\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\dto\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\dto\\plandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\dto\\plandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\repositories\\planrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\repositories\\planrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\helpers\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\controllers\\weekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\controllers\\weekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\migrations\\20251112110100_fix_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\migrations\\20251112110100_fix_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|c:\\users\\ammar\\desktop\\studyplanmanager\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5CEE1AB-68C5-FCEC-EA61-653FFB609ED2}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,187 +54,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlanController.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\PlanController.cs",
-              "RelativeDocumentMoniker": "backend\\Controllers\\PlanController.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\PlanController.cs",
-              "RelativeToolTip": "backend\\Controllers\\PlanController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T13:01:24.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "backend\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "backend\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-10T14:34:02.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\appsettings.json",
-              "RelativeDocumentMoniker": "backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\appsettings.json",
-              "RelativeToolTip": "backend\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-10T14:33:25.987Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TaskController.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\TaskController.cs",
-              "RelativeDocumentMoniker": "backend\\Controllers\\TaskController.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\TaskController.cs",
-              "RelativeToolTip": "backend\\Controllers\\TaskController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAzwDEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:11:57.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WeekController.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\WeekController.cs",
-              "RelativeDocumentMoniker": "backend\\Controllers\\WeekController.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\WeekController.cs",
-              "RelativeToolTip": "backend\\Controllers\\WeekController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:11:01.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "backend\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "backend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAApwD4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:52:52.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Program.cs",
-              "RelativeDocumentMoniker": "backend\\Program.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Program.cs",
-              "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:41:59.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Helpers\\JwtService.cs",
-              "RelativeDocumentMoniker": "backend\\Helpers\\JwtService.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Helpers\\JwtService.cs",
-              "RelativeToolTip": "backend\\Helpers\\JwtService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:40:31.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\User.cs",
-              "RelativeDocumentMoniker": "backend\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\User.cs",
-              "RelativeToolTip": "backend\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:39:01.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "backend\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "backend\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:37:27.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TaskItem.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\TaskItem.cs",
-              "RelativeDocumentMoniker": "backend\\Models\\TaskItem.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\TaskItem.cs",
-              "RelativeToolTip": "backend\\Models\\TaskItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:36:59.24Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Week.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\Week.cs",
-              "RelativeDocumentMoniker": "backend\\Models\\Week.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\Week.cs",
-              "RelativeToolTip": "backend\\Models\\Week.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
+              "Title": "UserRegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\DTO\\UserRegisterDto.cs",
+              "RelativeDocumentMoniker": "backend\\DTO\\UserRegisterDto.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\DTO\\UserRegisterDto.cs",
+              "RelativeToolTip": "backend\\DTO\\UserRegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:36:31.84Z",
+              "WhenOpened": "2025-11-14T13:04:17.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Plan.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\Plan.cs",
-              "RelativeDocumentMoniker": "backend\\Models\\Plan.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Models\\Plan.cs",
-              "RelativeToolTip": "backend\\Models\\Plan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\DTO\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "backend\\DTO\\UserLoginDto.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\DTO\\UserLoginDto.cs",
+              "RelativeToolTip": "backend\\DTO\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T11:36:11.62Z",
+              "WhenOpened": "2025-11-14T13:04:04.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "20251112110100_fix_user.cs",
-              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Migrations\\20251112110100_fix_user.cs",
-              "RelativeDocumentMoniker": "backend\\Migrations\\20251112110100_fix_user.cs",
-              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Migrations\\20251112110100_fix_user.cs",
-              "RelativeToolTip": "backend\\Migrations\\20251112110100_fix_user.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "PlanDto.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\DTO\\PlanDto.cs",
+              "RelativeDocumentMoniker": "backend\\DTO\\PlanDto.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\DTO\\PlanDto.cs",
+              "RelativeToolTip": "backend\\DTO\\PlanDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T11:01:00.667Z"
+              "WhenOpened": "2025-11-14T12:53:48.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlanRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\PlanRepository.cs",
+              "RelativeDocumentMoniker": "backend\\Repositories\\PlanRepository.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\PlanRepository.cs",
+              "RelativeToolTip": "backend\\Repositories\\PlanRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T12:46:13.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPlanRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\IPlanRepository.cs",
+              "RelativeDocumentMoniker": "backend\\Repositories\\IPlanRepository.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\IPlanRepository.cs",
+              "RelativeToolTip": "backend\\Repositories\\IPlanRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T12:45:41.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "backend\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "backend\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T11:46:21.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "backend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T11:46:15.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "backend\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "backend\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T11:46:03.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "backend\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "backend\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAD4vzEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T11:43:13.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlanController.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\PlanController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\PlanController.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Controllers\\PlanController.cs",
+              "RelativeToolTip": "backend\\Controllers\\PlanController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T10:18:26.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "backend\\Program.cs",
+              "ToolTip": "C:\\Users\\ammar\\Desktop\\StudyPlanManager\\backend\\backend\\Program.cs",
+              "RelativeToolTip": "backend\\Program.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAhwCQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T11:46:37.314Z",
+              "EditorCaption": ""
             }
           ]
         }

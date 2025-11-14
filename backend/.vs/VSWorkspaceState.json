@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\backend",
-    "\\backend\\Helpers"
+    "\\backend\\Controllers",
+    "\\backend\\Helpers",
+    "\\backend\\Repositories"
   ],
-  "SelectedNode": "\\backend.slnx",
+  "SelectedNode": "\\backend\\Repositories\\PlanRepository.cs",
   "PreviewInSolutionExplorer": false
 }
