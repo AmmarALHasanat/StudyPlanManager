@@ -1,6 +1,6 @@
 ﻿namespace backend.Repositories
 {
-    public class TaskRepository
+    public class TaskRepository : ITaskRepository
     {
     }
 }

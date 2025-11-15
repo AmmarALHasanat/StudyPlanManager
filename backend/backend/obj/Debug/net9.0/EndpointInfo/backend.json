@@ -36,6 +36,34 @@
         }
       }
     },
+    "/api/Auth/confirm-email": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/login": {
       "post": {
         "tags": [
@@ -214,17 +242,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTaskDto"
+                "$ref": "#/components/schemas/TaskDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTaskDto"
+                "$ref": "#/components/schemas/TaskDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTaskDto"
+                "$ref": "#/components/schemas/TaskDto"
               }
             }
           }
@@ -256,17 +284,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTaskDto"
+                "$ref": "#/components/schemas/TaskDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTaskDto"
+                "$ref": "#/components/schemas/TaskDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTaskDto"
+                "$ref": "#/components/schemas/TaskDto"
               }
             }
           }
@@ -428,40 +456,6 @@
   },
   "components": {
     "schemas": {
-      "CreateTaskDto": {
-        "type": "object",
-        "properties": {
-          "day": {
-            "type": "string",
-            "nullable": true
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "activityType": {
-            "type": "string",
-            "nullable": true
-          },
-          "book": {
-            "type": "string",
-            "nullable": true
-          },
-          "pages": {
-            "type": "string",
-            "nullable": true
-          },
-          "notes": {
-            "type": "string",
-            "nullable": true
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "CreateWeekDto": {
         "type": "object",
         "properties": {
@@ -506,14 +500,14 @@
         },
         "additionalProperties": false
       },
-      "UpdateTaskDto": {
+      "TaskDto": {
         "type": "object",
         "properties": {
           "day": {
             "type": "string",
             "nullable": true
           },
-          "title": {
+          "industry": {
             "type": "string",
             "nullable": true
           },
@@ -521,11 +515,11 @@
             "type": "string",
             "nullable": true
           },
-          "book": {
+          "activityName": {
             "type": "string",
             "nullable": true
           },
-          "pages": {
+          "target": {
             "type": "string",
             "nullable": true
           },
@@ -561,15 +555,19 @@
         "additionalProperties": false
       },
       "UserLoginDto": {
+        "required": [
+          "password",
+          "username"
+        ],
         "type": "object",
         "properties": {
           "username": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "password": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

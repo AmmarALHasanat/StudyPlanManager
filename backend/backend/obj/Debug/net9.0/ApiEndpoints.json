@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "backend.Controllers.AuthController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Auth/confirm-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
@@ -9,7 +30,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "backend.Controllers.UserLoginDto",
+        "Type": "backend.DTO.UserLoginDto",
         "IsRequired": true
       }
     ],
@@ -25,7 +46,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "backend.Controllers.UserRegisterDto",
+        "Type": "backend.DTO.UserRegisterDto",
         "IsRequired": true
       }
     ],
@@ -51,7 +72,7 @@
     "Parameters": [
       {
         "Name": "plan",
-        "Type": "backend.Controllers.PlanDto",
+        "Type": "backend.DTO.PlanDto",
         "IsRequired": true
       }
     ],
@@ -72,7 +93,7 @@
       },
       {
         "Name": "updated",
-        "Type": "backend.Controllers.PlanDto",
+        "Type": "backend.DTO.PlanDto",
         "IsRequired": true
       }
     ],
@@ -109,7 +130,7 @@
       },
       {
         "Name": "dto",
-        "Type": "backend.Controllers.UpdateTaskDto",
+        "Type": "backend.DTO.TaskDto",
         "IsRequired": true
       }
     ],
@@ -146,7 +167,7 @@
       },
       {
         "Name": "dto",
-        "Type": "backend.Controllers.CreateTaskDto",
+        "Type": "backend.DTO.TaskDto",
         "IsRequired": true
       }
     ],

@@ -1,6 +1,6 @@
 ﻿namespace backend.Repositories
 {
-    public class WeekRepository
+    public class WeekRepository : IWeekRepository
     {
     }
 }

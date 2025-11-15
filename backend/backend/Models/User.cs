@@ -11,7 +11,12 @@ namespace backend.Models
         public string Username { get; set; } = string.Empty;
         public byte[] PasswordHash { get; set; } = Array.Empty<byte>();
         public byte[] PasswordSalt { get; set; } = Array.Empty<byte>();
+        public bool EmailConfirmed { get; set; } = false;
+        public byte[]? EmailConfirmationTokenHash { get; set; }
+        public DateTime? EmailConfirmationTokenExpiry { get; set; }
         public string Role { get; set; } = "User"; // User / Admin
         public virtual List<Plan>? Plans { get; set; }
+
+
     }
 }
