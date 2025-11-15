@@ -37,8 +37,9 @@ builder.Services.AddScoped<IPlanRepository, PlanRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IWeekRepository, WeekRepository>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 
-
+ 
 builder.Services.AddSingleton<JwtService>();
 
 builder.Services.AddControllers().AddJsonOptions(options =>{

@@ -1,5 +1,6 @@
 ﻿using backend.Data;
 using backend.DTO;
+using backend.Helpers;
 using backend.Models;
 using backend.Repositories;
 using Microsoft.AspNetCore.Authorization;
@@ -27,21 +28,34 @@ namespace backend.Repositories
             return _context.Users.FirstOrDefault(u => u.Username == username);
         }
 
-        public void Register(UserRegisterDto userDto)
+        public string Register(UserRegisterDto userDto)
         {
             using var hmac = new HMACSHA512();
             byte[] salt = hmac.Key;
             byte[] hash = hmac.ComputeHash(Encoding.UTF8.GetBytes(userDto.Password));
+
+            var token = TokenHelper.GenerateToken();
+            var tokenHash = TokenHelper.ComputeSha256HashBytes(token);
 
             var user = new User
             {
                 Username = userDto.Username,
                 PasswordHash = hash,
                 PasswordSalt = salt,
-                Role = "User"
+                Role = "User",
+                EmailConfirmed = false,
+                EmailConfirmationTokenHash = tokenHash,
+                EmailConfirmationTokenExpiry = DateTime.UtcNow.AddHours(24) 
             };
 
             _context.Users.Add(user);
+            _context.SaveChanges();
+
+            return token;
+        }
+        public void Update(User user)
+        {
+            _context.Users.Update(user);
             _context.SaveChanges();
         }
 

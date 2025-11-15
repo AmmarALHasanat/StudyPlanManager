@@ -341,3 +341,6 @@ C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\ref\backend.dll
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\backend.sourcelink.json
 C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\obj\Debug\net9.0\swae.build.ex.cache
+C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\bin\Debug\net9.0\MailKit.dll
+C:\Users\ammar\Desktop\StudyPlanManager\backend\backend\bin\Debug\net9.0\MimeKit.dll

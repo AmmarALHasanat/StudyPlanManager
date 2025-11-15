@@ -5,7 +5,6 @@ namespace backend.Repositories
 {
     public interface IPlanRepository
     {
-        //bool Paln
         IEnumerable<Plan> GetPlansByUserId(int userId);
         Plan AddPlan(PlanDto plan, int userId);
         Plan UpdatePlan(Plan plan,PlanDto planDto);

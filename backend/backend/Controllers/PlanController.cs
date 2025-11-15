@@ -23,8 +23,7 @@ namespace backend.Controllers
         [HttpGet]
         public IActionResult GetMyPlans()
         {
-            var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _userRepository.GetByUsername(username??"");
+            var user = _userRepository.GetByUsername(User.FindFirstValue(ClaimTypes.Name) ?? "");
             if (user == null) return Unauthorized("User not found");
 
             var plans = _planRepository.GetPlansByUserId(user.Id);
@@ -35,12 +34,11 @@ namespace backend.Controllers
         [HttpPost]
         public IActionResult AddPlan([FromBody] PlanDto plan)
         {
-            var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _userRepository.GetByUsername(username ?? "");
+            var user = _userRepository.GetByUsername(User.FindFirstValue(ClaimTypes.Name) ?? "");
             if (user == null) return Unauthorized("User not found");
 
 
-           var newPlan = _planRepository.AddPlan(plan, user.Id);
+            var newPlan = _planRepository.AddPlan(plan, user.Id);
             return Ok(plan);
         }
 
@@ -61,8 +59,7 @@ namespace backend.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeletePlan(int id)
         {
-            var username = User.FindFirstValue(ClaimTypes.Name);
-            var user = _userRepository.GetByUsername(username ?? "");
+            var user = _userRepository.GetByUsername(User.FindFirstValue(ClaimTypes.Name) ?? "");
             if (user == null) return Unauthorized("User not found");
 
             var plan = _planRepository.GetPlanById(id, user.Id);
